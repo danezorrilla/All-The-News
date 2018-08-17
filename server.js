@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require("path");
 
 var request = require("request");
 var cheerio = require("cheerio");
@@ -29,6 +30,10 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // Routes
+
+app.get("/", function(req, res){
+  res.sendFile(path.join(__dirname, "index.html"))
+});
 
 app.get("/scrape", function(req, res){
 
