@@ -32,7 +32,7 @@ mongoose.connect(MONGODB_URI);
 // Routes
 
 app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname, "index.html"))
+  res.sendFile(path.join(__dirname, "./public/index.html"))
 });
 
 app.get("/scrape", function(req, res){
