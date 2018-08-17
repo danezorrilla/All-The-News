@@ -1,6 +1,3 @@
-$("#scrape").on("click", function(event){
-
-  event.preventDefault();
 
 // Grab the articles as a json
 $.getJSON("/articles", function(data) {
@@ -11,7 +8,6 @@ $.getJSON("/articles", function(data) {
   }
 });
 
-});
 
 
   
